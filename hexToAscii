@@ -1,0 +1,14 @@
+#!/usr/bin/python
+
+fo = open('asciiFile.txt', 'r+')
+inputText = fo.read()
+fo.close()
+lenOfText = len(inputText)
+x = 0
+hexString = ""
+flag = ""
+for i in range(lenOfText/2):
+	hexString = str(inputText[x:x+2])
+	x += 2
+	flag += str(chr(int(hexString, 16)))
+print flag
